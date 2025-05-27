@@ -1,0 +1,31 @@
+* {
+    padding: 0rem;
+    margin: 0rem;
+}
+
+@media (min-width: 1300px) {
+    body {
+        max-width: 1300px;
+        margin: auto;
+    }
+    header {
+        flex-direction: row;
+    }
+}
+
+header {
+    text-align: center;
+    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3 {
+    font-family: 'Karla';
+}
+
+a {
+    font-family: 'Karla';
+}
+
+p {
+    font-family: 'Karla';
+}
