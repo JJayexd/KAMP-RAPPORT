@@ -4,6 +4,10 @@ export const RapportStyled = styled.div`
     display: flex;
     flex-direction: row;
     margin: 1rem;
+    a {
+        text-decoration: none;
+        color: black;
+    }
     figure {
         background-color: #fefefe;
         box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.1);
