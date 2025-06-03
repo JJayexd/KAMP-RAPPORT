@@ -6,38 +6,31 @@ export const NavStyled = styled.nav`
             display: flex;
             flex-direction: column;
             li {
-            list-style: none;
-            margin: 1rem;
+                list-style: none;
+                margin: 1rem;
                 a {
-                font-weight: 900;
-                text-decoration: none;
-                padding: 0.8rem;
-                color: black;
-                }
-                a:hover {
-                    color: grey;
+                    font-weight: 750;
+                    text-decoration: none;
+                    padding: 0.8rem;
                 }
             }
         }
     }
 
     @media (min-width: 769px) {
-        display: flex;
-        justify-content: center;
-        margin-left: -175px;
+        margin: auto;
         width: 1300px;
         ul {
             display: flex;
             flex-direction: row;
+            justify-content: center;
             li {
                 list-style: none;
                 margin: 1rem;
                 a {
-
-                    font-weight: 900;
+                    font-weight: 750;
                     text-decoration: none;
                     padding: 0.5.rem;
-                    color: black;
                 }
             }
         }

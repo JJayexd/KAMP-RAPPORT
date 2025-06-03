@@ -4,17 +4,19 @@ import { Container } from './Components/Container/Container'
 import { ContentWrapper } from './Components/ContentWrapper/ContentWrapper.jsx'
 import { Header } from "./Components/Header/Header.jsx"
 import { Footer } from './Components/Footer/Footer.jsx'
+import GlobalStyles from './GlobalStyles.js'
 
 function App() {
   return (
     <>
-      <ContentWrapper>
-          <Header />
-            <AppRouter>
-            
-            </AppRouter>
-          <Footer />
-      </ContentWrapper>
+      <GlobalStyles />
+        <ContentWrapper>
+            <Header />
+              <AppRouter>
+              
+              </AppRouter>
+            <Footer />
+        </ContentWrapper>
     </>
   )
 }

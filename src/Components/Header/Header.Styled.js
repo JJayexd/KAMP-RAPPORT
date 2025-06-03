@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const HeaderStyled = styled.header`
-    padding: 1rem;
+    text-align: center;
+    padding: 1rem 0 1rem 0;
     h1 {
             font-size: 3rem;
             font-weight: 900;
-            color: red;
+            color: var(--color-accent);
         }
 
     @media (max-width: 768px) {
@@ -15,6 +16,6 @@ export const HeaderStyled = styled.header`
 
     @media (min-width: 769px) {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
 `

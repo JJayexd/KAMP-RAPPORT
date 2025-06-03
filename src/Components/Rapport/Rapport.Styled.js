@@ -16,13 +16,11 @@ export const RapportStyled = styled.div`
     }
 
     figure {
-        background-color: #fefefe;
-        box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.1);
         border: 0px solid;
         border-radius: 0px 0px 4px 4px;
         padding: 1rem;
         margin: 1rem;
-        flex: 1 1 300px;
+        flex: 300px;
         max-width: 400px;
         box-sizing: border-box;
     } 
@@ -33,12 +31,10 @@ export const RapportStyled = styled.div`
 
     a {
         text-decoration: none;
-        color: black;
     }
 
     p {
-        color: red;
-        font-weight: 900;
+        color: var(--color-text-primary);
     }
 
     .category {
@@ -46,10 +42,9 @@ export const RapportStyled = styled.div`
         font-size: 0.75rem;
         font-weight: 500;
         letter-spacing: 0.025rem;
-        font-style: normal;
         text-transform: uppercase;
-        color: #FFFFFF;
-        background-color: #EF2D56;
+        color: var(--color-text-primary);
+        background-color: var(--color-accent);
         border-radius: 0rem;
         -webkit-border-radius: 0rem;
         -moz-border-radius: 0rem;
