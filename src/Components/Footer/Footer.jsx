@@ -4,13 +4,13 @@ export const Footer = () => {
     return (
         <FooterStyled>
             <ul>
-                <h4>Politik</h4>
+                <h3>Politik</h3>
                 <li>Cookies</li>
                 <li>Privatliv</li>
                 <li>Deling</li>
             </ul>
             <ul>
-                <h4>Socials</h4>
+                <h3>Socials</h3>
                 <li>Instagram</li>
                 <li>Twitter</li>
             </ul>

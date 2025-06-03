@@ -5,6 +5,7 @@ export const RapportStyled = styled.div`
     @media (min-width: 768px) {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         margin: 1rem;
     }
 
@@ -21,7 +22,9 @@ export const RapportStyled = styled.div`
         border-radius: 0px 0px 4px 4px;
         padding: 1rem;
         margin: 1rem;
-        width: 400px;
+        flex: 1 1 300px;
+        max-width: 400px;
+        box-sizing: border-box;
     } 
     
     h3 {
@@ -38,9 +41,30 @@ export const RapportStyled = styled.div`
         font-weight: 900;
     }
 
+    .category {
+        font-family: 'Heebo', sans-serif;
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.025rem;
+        font-style: normal;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        background-color: #EF2D56;
+        border-radius: 0rem;
+        -webkit-border-radius: 0rem;
+        -moz-border-radius: 0rem;
+        padding: 0.35rem 0.5rem;
+        width: fit-content;
+        border-style: none;
+        border-width: 0rem;
+        border-color: #EF2D56;
+    }
+
     img {
         height: 200px;
         width: 100%;
         object-fit: cover;
+        display: block;
     }
+
 `
