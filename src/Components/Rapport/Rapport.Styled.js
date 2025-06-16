@@ -5,7 +5,6 @@ export const RapportStyled = styled.div`
     @media (min-width: 768px) {
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
         margin: 1rem;
     }
 
@@ -20,10 +19,9 @@ export const RapportStyled = styled.div`
         border-radius: 0px 0px 4px 4px;
         padding: 1rem;
         margin: 1rem;
-        flex: 300px;
         max-width: 400px;
         box-sizing: border-box;
-    } 
+    }
     
     h3 {
         font-weight: 750;

@@ -34,7 +34,6 @@ export const Footer = () => {
         <SocialSection>
           <a href="#"><i className="fab fa-facebook-f"></i></a>
           <a href="#"><i className="fab fa-twitter"></i></a>
-          <a href="#"><i className="fab fa-google"></i></a>
           <a href="#"><i className="fab fa-instagram"></i></a>
           <a href="#"><i className="fab fa-linkedin"></i></a>
           <a href="#"><i className="fab fa-github"></i></a>

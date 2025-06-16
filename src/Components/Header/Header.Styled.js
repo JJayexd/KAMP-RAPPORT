@@ -14,7 +14,7 @@ export const HeaderStyled = styled.header`
         flex-direction: column;
     }
 
-    @media (min-width: 769px) {
+    @media (min-width: 768px) {
         display: flex;
         flex-direction: column;
     }

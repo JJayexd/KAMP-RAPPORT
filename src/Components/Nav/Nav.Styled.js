@@ -17,7 +17,7 @@ export const NavStyled = styled.nav`
         }
     }
 
-    @media (min-width: 769px) {
+    @media (min-width: 768px) {
         margin: auto;
         width: 1300px;
         ul {

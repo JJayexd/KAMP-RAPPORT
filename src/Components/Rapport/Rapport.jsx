@@ -39,7 +39,7 @@ export const Rapport = () => {
               </figure>
           ))
         ) : (
-          <p>Loading...</p>
+          <p>Loading..</p>
         )}
       </RapportStyled>
     );

@@ -43,7 +43,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   figure {
-    background-color: var(--color-card);
+    background-color: var(--color-bg);
   }
 `;
 
