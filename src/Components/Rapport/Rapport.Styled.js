@@ -3,9 +3,11 @@ import styled from "styled-components";
 export const RapportStyled = styled.div`
 
     @media (min-width: 768px) {
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
         margin: 1rem;
+        overflow: hidden auto;
     }
 
     @media (max-width: 768px) {
