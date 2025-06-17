@@ -1,42 +1,45 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { contentfulClient } from "../../Utils/contentfulClient";
-import { RapportDetailsStyled } from './RapportDetails.Styled';
-import { RenderRichText } from "./RenderRichText.jsx";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { RapportDetailsStyled } from "./RapportDetails.Styled";
 
 export const RapportDetails = () => {
-    const { rapportID } = useParams();
-    const [rapport, setRapport] = useState(null);
+  const { rapportID } = useParams();
+  const [rapport, setRapport] = useState(null);
 
-    useEffect(() => {
-      contentfulClient
-        .getEntries({
-          content_type: "rapport",
-          "sys.id": rapportID,
-          select: "fields"
-        })
-        .then((data) => {
-          console.log('Fetched Data:', data);
-          setRapport(data.items[0]);
-        })
-        .catch((err) => console.log(err));
-    }, [rapportID]);
-    
-    if (!rapport) return <p>Loading...</p>;
-    
-    const { title, date, author, image, content } = rapport.fields;
-    const imageUrl = image?.fields?.file?.url;
-    const authorName = author?.fields?.name ?? "Ukendt forfatter";
-    
-    return (
-      <RapportDetailsStyled>
-        <article>
-          <h3>{title}</h3>
-          <p>D. {`${date} af ${authorName}`}</p>
-          {imageUrl && <img src={`https:${imageUrl}`} alt="Contentful Image" />}
-          <RenderRichText document={content} />
-        </article>
-      </RapportDetailsStyled>
-    );
-    
-}
+  useEffect(() => {
+    contentfulClient
+      .getEntry(rapportID)
+      .then((entry) => {
+        setRapport(entry.fields);
+      })
+      .catch((err) => console.log("Fejl:", err));
+  }, [rapportID]);
+
+  if (!rapport) {
+    return <RapportDetailsStyled><p>Loading..</p></RapportDetailsStyled>;
+  }
+
+  return (
+    <RapportDetailsStyled>
+      {rapport.image?.fields?.file?.url && (
+        <img
+          src={`https:${rapport.image.fields.file.url}`}
+          alt={rapport.image.fields.title || "Rapport billede"}
+          className="rapport-image"
+        />
+      )}
+
+      <h1>{rapport.title}</h1>
+      <p className="meta">
+        {rapport.date} af {rapport.author.fields.name}
+      </p>
+      <p className="category">{rapport.category}</p>
+
+      <div className="rapport-body">
+        {documentToReactComponents(rapport.body)}
+      </div>
+    </RapportDetailsStyled>
+  );
+};

@@ -1,16 +1,22 @@
 import styled from 'styled-components';
 
 export const NavStyled = styled.nav`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
     @media (max-width: 768px) {
         ul {
             display: flex;
             flex-direction: column;
+            align-items: center;
             max-height: 900px;
+            padding: 0;
 
             li {
                 list-style: none;
                 margin: 1rem;
-                
+
                 a, .dropbtn {
                     font-weight: 750;
                     text-decoration: none;
@@ -35,13 +41,12 @@ export const NavStyled = styled.nav`
     }
 
     @media (min-width: 768px) {
-        margin: auto;
-        width: 1300px;
-
         ul {
             display: flex;
             flex-direction: row;
             justify-content: center;
+            align-items: center;
+            padding: 0;
 
             li {
                 list-style: none;
@@ -59,15 +64,25 @@ export const NavStyled = styled.nav`
                     position: absolute;
                     top: 100%;
                     margin-top: 0.3rem;
-                    left: 10;
+                    left: 0;
                     width: max-content;
                     background-color: var(--color-bg);
                     z-index: 10;
+                    display: flex;
+                    flex-direction: row;
+                    padding: 0rem 1rem;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                    border-radius: 4px;
+                }
+
+                hr {
+                    height: 20px;
+                    margin: 1rem;
                 }
 
                 .dropdown-content li {
                     text-transform: uppercase;
-                    margin: 1 0 1 0;
+                    margin: 1rem 0;
                 }
             }
         }
