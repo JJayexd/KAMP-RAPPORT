@@ -37,8 +37,8 @@ export const RapportDetails = () => {
       </p>
       <p className="category">{rapport.category}</p>
 
-      <div className="rapport-body">
-        {documentToReactComponents(rapport.body)}
+      <div className="rapport-content">
+        {documentToReactComponents(rapport.content)}
       </div>
     </RapportDetailsStyled>
   );

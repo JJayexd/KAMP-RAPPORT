@@ -40,23 +40,19 @@ export const RapportDetailsStyled = styled.section`
     padding: 0.3rem 0.7rem;
     background-color: #eef6fa;
     color: #005a8d;
+    text-transform: uppercase;
     border-radius: 6px;
     font-size: 0.85rem;
     margin-bottom: 1.5rem;
   }
 
-  .rapport-body {
-    line-height: 1.6;
+  .rapport-content {
+    background-color: var(--color-bg);
     font-size: 1rem;
-    color: #333;
+
 
     p {
-      margin-bottom: 1rem;
-    }
-
-    h2, h3 {
-      margin-top: 2rem;
-      margin-bottom: 1rem;
+      color: white;
     }
   }
 `;
