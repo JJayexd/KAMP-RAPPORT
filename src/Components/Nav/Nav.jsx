@@ -37,6 +37,8 @@ export const Nav = () => {
                             <li><NavLink to="/">Fodbold</NavLink></li>
                             <Divider />
                             <li><NavLink to="/">Basketball</NavLink></li>
+                            <Divider />
+                            <li><NavLink to="/">Formel 1</NavLink></li>
                         </ul>
                     )}
                 </li>

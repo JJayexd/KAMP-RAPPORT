@@ -24,7 +24,6 @@ export const NavStyled = styled.nav`
 
                 .dropdown-content li {
                     text-transform: uppercase;
-                    margin-top: 2rem;
                 }
 
                 hr {
@@ -58,7 +57,12 @@ export const NavStyled = styled.nav`
 
                 .dropdown-content {
                     position: absolute;
-                    top: auto;
+                    top: 100%;
+                    margin-top: 0.3rem;
+                    left: 10;
+                    width: max-content;
+                    background-color: var(--color-bg);
+                    z-index: 10;
                 }
 
                 .dropdown-content li {
