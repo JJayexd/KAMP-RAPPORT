@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { contentfulClient } from "../../Utils/contentfulClient";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { RenderRichText } from "./RenderRichText"
 import { RapportDetailsStyled } from "./RapportDetails.Styled";
 
 export const RapportDetails = () => {
@@ -38,7 +39,7 @@ export const RapportDetails = () => {
       <p className="category">{rapport.category}</p>
 
       <div className="rapport-content">
-        {documentToReactComponents(rapport.content)}
+        <RenderRichText document={rapport.content} />
       </div>
     </RapportDetailsStyled>
   );

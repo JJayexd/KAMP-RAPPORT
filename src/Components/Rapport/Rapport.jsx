@@ -34,7 +34,7 @@ export const Rapport = () => {
                 <Link to={`/rapport/${item.sys.id}`} key={item.sys.id}>
                   <h3>{item.fields.title}</h3>
                 </Link>
-                <p>D. {`${item.fields.date} af ${item.fields.author.fields.name}`}</p>
+                <p className="text-grey">{`${item.fields.date} af ${item.fields.author.fields.name}`}</p>
                 <p className="category">{item.fields.category}</p>
               </figure>
           ))
