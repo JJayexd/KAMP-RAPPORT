@@ -34,11 +34,11 @@ export const Nav = () => {
                     </NavLink>
                     {isDropdownOpen && (
                         <ul className="dropdown-content">
-                            <li><NavLink to="/">Fodbold</NavLink></li>
+                            <li><NavLink to="/kategori/fodbold">Fodbold</NavLink></li>
                             <Divider />
-                            <li><NavLink to="/">Basketball</NavLink></li>
+                            <li><NavLink to="/kategori/basketball">Basketball</NavLink></li>
                             <Divider />
-                            <li><NavLink to="/">Formel 1</NavLink></li>
+                            <li><NavLink to="/kategori/formel1">Formel 1</NavLink></li>
                         </ul>
                     )}
                 </li>

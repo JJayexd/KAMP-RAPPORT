@@ -7,7 +7,7 @@ import { RapportStyled } from "./Rapport.Styled";
 
 export const Rapport = () => {
     const { rapportID } = useParams();
-    const [rapportData, setRapport] = useState([]);
+    const [rapports, setRapports] = useState([]);
   
     useEffect(() => {
       contentfulClient
@@ -18,15 +18,15 @@ export const Rapport = () => {
         })
         .then((data) => {
           console.log('Fetched Data:', data);
-          setRapport(data.items);
+          setRapports(data.items);
         })
         .catch((err) => console.log(err));
     }, [rapportID]);
   
     return (
       <RapportStyled>
-        {rapportData.length > 0 ? (
-          rapportData.map((item) => (
+        {rapports.length > 0 ? (
+          rapports.map((item) => (
               <figure key={item.sys.id}>
                 {item.fields.image?.fields?.file?.url && (
                   <img src={`https:${item.fields.image.fields.file.url}`} alt="Contentful Image" />

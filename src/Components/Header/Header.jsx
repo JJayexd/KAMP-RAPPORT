@@ -9,9 +9,6 @@ export const Header = ({}) => {
                 <h1>KAMPRAPPORT.DK</h1>
                 <Nav />
             </HeaderStyled>
-            {/* <Divider style={
-                {marginTop: '0rem'}
-            } /> */}
         </>
     )
 }
